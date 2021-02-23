@@ -1,0 +1,19 @@
+.section-banner {
+	@include v-center(400px);
+
+	background-size: cover;
+	background-position: center;
+	padding: 20px 0;
+
+	.banner-text {
+		color: $banner-color;
+
+		@include media('≥tablet') {
+			max-width: 70%;
+		}
+	}
+
+	.title {
+		margin-bottom: $title-margin-bottom;
+	}
+}

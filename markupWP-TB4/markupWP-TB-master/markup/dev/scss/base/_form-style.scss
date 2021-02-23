@@ -1,0 +1,83 @@
+// form style
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+select,
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+// input[type='date'],
+textarea {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  padding: $input-padding-y $input-padding-x;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  font-family: $font-family-base;
+  box-sizing: border-box;
+  border: $input-border-width solid $input-border-color;
+  border-radius: 4px;
+  color: $input-color;
+  background: $input-bg;
+
+  &:not(textarea) {
+    @include media('≥tablet') {
+      height: rem-calc(48);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include placeholder {
+    color: $input-placeholder-color;
+  }
+}
+
+textarea {
+  resize: none;
+  vertical-align: top;
+}
+
+// select {
+  // appearance: none;
+// }
+
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance: none;}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type='submit'],
+button {
+  @include animate (background color);
+
+  cursor: pointer;
+
+  display: inline-block;
+  font-size: $font-family-base;
+  line-height: $input-btn-line-height;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  padding: $btn-padding-y $btn-padding-x;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}

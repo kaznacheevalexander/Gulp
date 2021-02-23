@@ -1,0 +1,166 @@
+#header {
+  position: relative;
+  background: $gray;
+  padding: 20px 0;
+  z-index: 2;
+}
+
+.header-holder {
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  min-width: 100px;
+  margin-right: 20px;
+}
+
+#nav {
+  @extend %clearfix;
+
+  position: relative;
+  flex-grow: 1;
+}
+
+.nav-drop {
+  @include animate(all);
+
+  background: $mobile-nav-drop-bg;
+  color: $mobile-nav-drop-color;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+
+  @include media('≥tablet') {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    color: $nav-color;
+    background: none;
+  }
+
+  .nav-active & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  ul {
+    @extend %listreset;
+  }
+
+  > ul {
+    @include media('≥tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+
+    + li {
+      padding-left: 20px;
+    }
+
+    &.active {
+      a {
+        opacity: 0.5;
+      }
+    }
+
+    &:hover {
+      >a {
+        opacity: 0.5;
+      }
+
+      > ul {
+        display: block;
+      }
+    }
+
+    > ul {
+      display: none;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      z-index: 2;
+
+      @include media('≥tablet') {
+        position: absolute;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.nav-opener {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  line-height: 0;
+  float: right;
+
+  @include media('≥tablet') {
+    display: none;
+  }
+
+  &:before,
+  &:after,
+  span {
+    @include animate(transform);
+    background: $black;
+    position: absolute;
+    top: 16px;
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    margin-top: -2px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    top: 10px;
+  }
+
+  &:after {
+    top: 22px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  .nav-active & {
+    span {
+      opacity: 0;
+    }
+
+    &:after,
+    &:before {
+      transform: rotate(45deg);
+      top: 16px;
+      left: 15%;
+      right: 15%;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.resize-active .nav-drop,
+.resize-active .nav-drop > ul {
+  transition:none !important;
+}

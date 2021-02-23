@@ -1,0 +1,21 @@
+header#header.header
+	nav.navbar.navbar-expand-lg.navbar-light.bg-light
+		.container
+			a.navbar-brand(href='#') Navbar
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse
+				//- - var curentClass = 'home'
+				ul.navbar-nav.mr-auto
+					li.nav-item(class={active: curentClass === 'home'})
+						a.nav-link(href='#')
+							| Home
+							span.sr-only (current)
+					li.nav-item(class={active: curentClass === 'link1'})
+						a.nav-link(href='#') Link 1
+					li.nav-item(class={active: curentClass === 'link2'})
+						a.nav-link(href='#') Link 2
+				form.form-inline.my-2.my-lg-0
+					input.form-control.mr-sm-2(type='text', placeholder='Search', aria-label='Search')
+					button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+

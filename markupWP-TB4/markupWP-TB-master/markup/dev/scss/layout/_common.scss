@@ -1,0 +1,30 @@
+body {
+	min-width: $min-width-container;
+}
+
+.container {
+	max-width: $max-width-container;
+}
+
+#wrapper {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	width: 100%;
+}
+
+a[href^=tel],
+a[href^=fax],
+a[href^=skype]{
+	color: $link-color;
+	text-decoration:none;
+}

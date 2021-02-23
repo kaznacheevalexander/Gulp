@@ -1,0 +1,42 @@
+.btn {
+  @include animate(background color);
+  
+  border: $btn-border;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  display: inline-block;
+  vertical-align: top;
+
+  &.btn-default {
+    @include button-color($btn-background, $btn-color, $btn-border-color, $btn-hover-background, $btn-hover-color);
+  }
+
+  &.btn-primary {
+    @include button-color($btn-background-primary, $btn-color-primary, $btn-border-color-primary, $btn-hover-background-primary, $btn-hover-color-primary);
+  }
+}
+
+.btn-group {
+  display: flex;
+
+  > .btn {
+    + .btn {
+      border-left: 0;
+    }
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    margin: 0 0 10px;
+    max-width: 50%;
+
+    +.btn {
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+include ../mixins/_mixin
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title TITLE
+		link(media='all', rel='stylesheet', href='style.css')
+	//- -var bodyClass= "home"; // add class on body
+	body(class= bodyClass)
+		#wrapper
+			block content
+		script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		script(type='text/javascript').
+			window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"></\/script>')
+		script(type='text/javascript', src='js/jquery.main.js')

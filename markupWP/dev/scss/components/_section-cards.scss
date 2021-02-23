@@ -1,0 +1,20 @@
+.section-cards {
+	padding: 20px 0;
+
+	@include media('≥tablet') {
+		padding: 40px 0;		
+	}
+
+	.card-img {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.card-title {
+		margin-bottom: 10px;
+	}
+
+	.btn-wrap {
+		justify-content: center;
+	}
+}

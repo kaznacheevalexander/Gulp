@@ -1,0 +1,17 @@
+:not(#foo) > input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+
+  + label:before {
+    display: inline-block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin: 0px 4px -1px 2px;
+    background: #f00;
+  }
+
+  &:checked + label:before {
+    background: #00f;
+  }
+}

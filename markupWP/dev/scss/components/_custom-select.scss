@@ -1,0 +1,33 @@
+.select-style {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: $select-height;
+  width: 100%;
+  padding: $select-padding;
+  font-size: $select-font-size;
+  line-height: $select-line-height;
+  box-sizing: border-box;
+  border: $select-border;
+  border-radius: $select-border-radius;
+
+  &:focus {
+    outline: none;
+  }
+
+  #sidebar & {
+    width: 100%;
+  }
+}

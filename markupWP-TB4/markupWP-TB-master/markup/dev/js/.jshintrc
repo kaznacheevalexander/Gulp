@@ -1,0 +1,18 @@
+{
+  "asi"      : false,
+  "browser"  : true,
+  "eqeqeq"   : true,
+  "eqnull"   : true,
+  "es3"      : true,
+  "es5"      : true,
+  "esnext"   : true,
+  "expr"     : true,
+  "jquery"   : true,
+  "latedef"  : "nofunc",
+  "laxbreak" : true,
+  "nonbsp"   : true,
+  "strict"   : false,
+  "undef"    : true,
+  "unused"   : true,
+  "predef"   : ["alert", "module", "define", "require", "console"]
+}

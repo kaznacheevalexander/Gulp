@@ -1,0 +1,47 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main(role="main")
+			// section banner template
+			section.section-banner(style="background-image: url(images/img-150x150.jpg)")
+				.container
+					.banner-text
+						h1.title Text h1
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, odit saepe ipsam corrupti delectus autem labore dolorum ratione sit rem libero pariatur tenetur consequatur ipsa inventore? Corrupti quod reiciendis sapiente!
+						.btn-wrap
+							a.btn.btn-default(href="#") Link
+							a.btn.btn-primary(href="#") Link
+			section.section-cards
+				.container
+					.df-row
+						.col-ph-6.col-sm-4.col-md-3
+							+card({
+								imageName: 'img-150x150.jpg',
+								title: 'Lorem',
+								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
+								link: 'More'
+							})
+						.col-ph-6.col-sm-4.col-md-3 
+							+card({
+								imageName: 'img-150x150.jpg',
+								title: 'Lorem',
+								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
+								link: 'More'
+							})
+						.col-ph-6.col-sm-4.col-md-3 
+							+card({
+								imageName: 'img-150x150.jpg',
+								title: 'Lorem',
+								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
+								link: 'More'
+							})
+						.col-ph-6.col-sm-4.col-md-3 
+							+card({
+								imageName: 'img-150x150.jpg',
+								title: 'Lorem',
+								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
+								link: 'More'
+							})
+			form
+				input(type="text")
+		include pug/common/_footer

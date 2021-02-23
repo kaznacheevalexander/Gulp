@@ -1,0 +1,74 @@
+// Typography
+//
+
+/* name fonts */
+
+// @include font-face(name, name-Light, 300, normal);
+// @include font-face(name, name-LightItalic, 300, italic);
+// @include font-face(name, name-Regular, normal, normal);
+// @include font-face(name, name-RegularItalic, normal, italic);
+// @include font-face(name, name-Medium, 500, normal);
+// @include font-face(name, name-MediumItalic, 500, italic);
+// @include font-face(name, name-Bold, 700, normal);
+// @include font-face(name, name-BoldItalic, 700, italic);
+// @include font-face(name, name-Black, 900, normal);
+// @include font-face(name, name-BlackItalic, 900, italic);
+
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.42;
+}
+
+h1 {
+	line-height: 1.42;
+	font-size: rem-calc(28);
+
+	@include media('≥desktop') {
+		font-size: $h1-font-size;
+	}
+}
+
+// h2 {
+
+// 	font-size: rem-calc(22);
+
+// 	@include media('≥desktop') {
+// 		font-size: $h2-font-size;
+// 	}
+// }
+
+// h3 {
+
+// 	font-size: rem-calc(20);
+
+// 	@include media('≥desktop') {
+// 		font-size: $h3-font-size;
+// 	}
+// }
+
+// h4 {
+
+// 	font-size: rem-calc(18);
+
+// 	@include media('≥desktop') {
+// 		font-size: $h4-font-size;
+// 	}
+// }
+
+h5 {
+
+	font-size: rem-calc(15);
+
+	@include media('≥desktop') {
+		font-size: $h5-font-size;
+	}
+}
+
+// h6 {
+
+// 	font-size: $font-size-base;
+
+// 	@include media('≥desktop') {
+// 		font-size: $h6-font-size;
+// 	}
+// }

@@ -1,0 +1,25 @@
+header#header
+	.container
+		.header-holder
+			.logo: a(href="#")
+				img(src="images/logo.png" alt="LOGO" width="100" height="20")
+			nav#nav(role='navigation', aria-label='Primary Menu')
+				a(href="#").nav-opener: span Open
+				.nav-drop
+					ul.primary-menu
+						li.menu-item
+							a(href='#') Page A
+						li.menu-item
+							a(href='#') Page B
+						li.menu-item
+							a(href='#') Front Page
+						li.menu-item
+							a(href='#') Page Markup And Formatting
+						li.menu-item.menu-item-has-children
+							a(href='#') Level 1
+							ul.sub-menu.toggled-on
+								li.menu-item.menu-item-has-children.current-menu-parent
+									a(href='#') Level 2
+									ul.sub-menu.toggled-on
+										li.menu-item.current-menu-item
+											a(href='#') Level 3a
